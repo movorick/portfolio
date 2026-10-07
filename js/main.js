@@ -20,7 +20,6 @@
   }
 
   window.addEventListener("scroll", onScroll, { passive: true });
-  onScroll();
 
   // Mobile navigation
   function closeNav() {
@@ -75,6 +74,9 @@
       }
     });
   }
+
+  // sections 선언 이후에 호출해야 함 (const TDZ)
+  onScroll();
 
   // Scroll reveal
   const revealEls = document.querySelectorAll(
