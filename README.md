@@ -18,8 +18,45 @@ HTML, CSS, JavaScript로 구성되어 있으며 반응형 디자인을 지원합
 
 ## 실행 방법
 
+별도의 빌드 과정이나 패키지 설치 없이 실행할 수 있는 정적 웹사이트입니다.
+
+### 1. 브라우저에서 바로 열기
+
 1. 프로젝트 폴더를 엽니다.
-2. `index.html` 파일을 브라우저에서 실행합니다.
+2. `index.html` 파일을 더블클릭하거나 브라우저로 드래그해 실행합니다.
+
+### 2. 로컬 서버로 실행하기 (권장)
+
+브라우저 보안 정책에 따른 경로·리소스 문제를 피하려면 로컬 서버로 실행하는 것을 권장합니다.
+프로젝트 루트(`index.html`이 있는 폴더)에서 아래 방법 중 하나를 사용하세요.
+
+**Python**
+
+```bash
+python -m http.server 8000
+```
+
+**Node.js**
+
+```bash
+npx serve .
+```
+
+실행 후 터미널에 표시된 주소(예: `http://localhost:8000`)로 접속합니다.
+
+**VS Code**
+
+[Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) 확장을 설치한 뒤, `index.html`에서 마우스 오른쪽 버튼 → **Open with Live Server**를 선택합니다.
+
+### 3. 배포 (Vercel)
+
+이 프로젝트는 Vercel에 연결되어 있습니다. [Vercel CLI](https://vercel.com/docs/cli)로 배포할 수 있습니다.
+
+```bash
+npm i -g vercel   # 최초 1회 설치
+vercel            # 미리보기(Preview) 배포
+vercel --prod     # 프로덕션 배포
+```
 
 ## 커스터마이징
 
